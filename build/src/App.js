@@ -12,6 +12,7 @@ const Container = styled.div`
   margin: 5px auto 5px auto;
 `;
 
+var blocks = [];
 
 function App() {
   // 3: Get the selected theme, font list, etc.
@@ -39,8 +40,13 @@ function App() {
           <Container style={{ fontFamily: selectedTheme.font }}>
             <div className="App">
               <div className="topMenu"></div>
-              <Block idString="block1" headerString="header1" />
-              <Block idString="block2" headerString="header2" />
+              <div className="mainArea">
+                <ul>
+                  {blocks.map(block => (
+                    <Block id={block}></Block>
+                  ))}
+                </ul>
+              </div>
             </div>
           </Container>
         </ThemeProvider>
@@ -48,6 +54,14 @@ function App() {
     </>
   );
 }
+
+export function spawnBlock() {
+  const name = "block" + blocks.length;
+  blocks.push(name);
+
+}
+
+
 
 
 

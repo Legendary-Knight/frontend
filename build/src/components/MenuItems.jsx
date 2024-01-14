@@ -1,5 +1,6 @@
 import Dropdown from './Dropdown';
 import { useState, useEffect, useRef } from "react";
+import { spawnBlock } from '../App';
 
 const MenuItems = ({ items, depthLevel }) => {
     const [dropdown, setDropdown] = useState(false);
@@ -43,6 +44,13 @@ const MenuItems = ({ items, depthLevel }) => {
 };
 
 function buttonAction(title) {
+    switch (title) {
+        default:
+            break;
+        case "Source Default":
+            spawnBlock();
+            break;
+    }
 
 }
 
