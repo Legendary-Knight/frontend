@@ -4,9 +4,9 @@ let DraggableCore = Draggable.DraggableCore;
 
 const Block = () => {
     return (
-        <Draggable>
+        <Draggable class="Rect">
             <div id="Rect">
-                <div id="Rectheader">Click here to move</div>
+                <div class="Rectheader">Click here to move</div>
                 <p>Moveable</p>
                 <div id="Options">
                     <div class="dropdown">

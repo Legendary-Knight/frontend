@@ -1,4 +1,15 @@
 /* rectangle stuff, probably temporary*/
+
+#Rect {
+  height: 120px;
+    width: 250px;
+    /*width: 100px;*/
+    position: absolute;
+    z-index: 9;
+    background-color: #2196F3;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+}
 .Rect {
     height: 120px;
     width: 250px;
@@ -10,7 +21,7 @@
     text-align: center;
   }
   
-  .Rectheader {
+  #Rectheader {
     padding: 5px 50px 5px 50px;
     cursor: move;
     z-index: 10;
