@@ -6,8 +6,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import './App.css';
 
-import * as themes from './theme/schema.json';
-import { setToLS } from './utils/storage';
 import Root from "./routes/root";
 import Themes from "./routes/themes";
 import Editor from "./routes/texteditor";
@@ -40,12 +38,6 @@ root.render(
     <RouterProvider router={router} />
   </React.StrictMode>
 )
-const Index = () => {
-  setToLS('all-themes', themes.default);
-  return (
-    <App />
-  )
-}
 
 
 // If you want to start measuring performance in your app, pass a function
